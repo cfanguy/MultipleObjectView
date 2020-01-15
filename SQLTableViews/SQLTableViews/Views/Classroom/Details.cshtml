@@ -1,0 +1,32 @@
+﻿@model dynamic
+
+@{
+    Layout = "_Layout";
+}
+
+<table>
+    <tr>
+        <td>Class Name</td>
+    </tr>
+
+    @foreach (ClassLUT classNameList in Model.classNameList)
+    {
+        <tr>
+            <td>@classNameList.Name</td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<table>
+    <tr>
+        <td>Student Name</td>
+    </tr>
+    @foreach (Student studentList in Model.studentList)
+    {
+        <tr>
+            <td>@studentList.Name</td>
+        </tr>
+    }
+</table>
